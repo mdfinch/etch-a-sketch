@@ -10,7 +10,11 @@
 <body>
     <header>Etch-A-Sketch</header>
     <div class="container">
-
+        <input type="range" name="slider" id="slider" min="8" max="32" step="4" autocomplete="off">
+        <br>
+        <label for="slider">Grid Size</label>
+        <p>Value: <span id="value"></span> X <span id="value2"></span></p>
+        <div class="grid"></div>
     </div>
 </body>
 <script src="./eas.js"></script>
