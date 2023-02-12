@@ -29,3 +29,10 @@ for (let index = 0; index < slider.value; index++) {
         row.appendChild(column);
     }
 }
+
+slider.oninput = function() {
+    // Updates slider values
+    output.innerHTML = slider.value;
+    output2.innerHTML = slider.value
+   
+ }
