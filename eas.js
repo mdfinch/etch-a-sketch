@@ -58,3 +58,10 @@ function gridSize(sliderValue) {
     }
     return grid;
 }
+
+function cleanBoard() {
+    let nodeList = document.querySelectorAll(".column");
+    for (let element of nodeList) {
+        element.classList.remove("color")
+    }
+}
