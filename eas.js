@@ -65,3 +65,30 @@ function cleanBoard() {
         element.classList.remove("color")
     }
 }
+
+// Produces a random integer between 0-255 for a RGB value
+// 256 is used as Math.floor is inclusive from 0-255
+function randomInt() {
+    return Math.floor(Math.random()*(256));
+}
+
+// Produces a random RGB value in an array
+function randomColor() {
+    let red = randomInt();
+    let green = randomInt();
+    let blue = randomInt();
+    
+    return `${red},${green},${blue}`;
+}
+
+// Adds a new event listenter to every column using the Rainbow button
+// Mouseover triggers the randomColor function to create a rainbow effect
+
+function applyRainbow() {
+    let nodeList = document.querySelectorAll(".column");
+    for(let element of nodeList) {
+        element.addEventListener("mouseover", function(){
+            element.setAttribute("style", `background-color: rgb(${randomColor()})`);
+        });
+    }
+}
