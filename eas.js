@@ -40,7 +40,7 @@ slider.oninput = function() {
 }
 
 function gridSize(sliderValue) {
-    //Creates a new div with class of grid, this matches the intial grid settings
+    // Creates a new div with class of grid, this matches the intial grid settings
     let grid = document.createElement("div");
     grid.setAttribute("class", "grid");
     
@@ -99,6 +99,16 @@ function applyBlack() {
     for(let element of nodeList) {
         element.addEventListener("mouseover", function(){
             element.setAttribute("style", "background-color: black");
+        });
+    }
+}
+
+// Repeat of previous apply function, applys white color.
+function applyEraser() {
+    let nodeList = document.querySelectorAll(".column");
+    for(let element of nodeList) {
+        element.addEventListener("mouseover", function(){
+            element.setAttribute("style", "background-color: white");
         });
     }
 }
