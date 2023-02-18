@@ -62,7 +62,8 @@ function gridSize(sliderValue) {
 function cleanBoard() {
     let nodeList = document.querySelectorAll(".column");
     for (let element of nodeList) {
-        element.classList.remove("color")
+        element.classList.remove("color");
+        element.removeAttribute("style");
     }
 }
 
@@ -83,12 +84,21 @@ function randomColor() {
 
 // Adds a new event listenter to every column using the Rainbow button
 // Mouseover triggers the randomColor function to create a rainbow effect
-
 function applyRainbow() {
     let nodeList = document.querySelectorAll(".column");
     for(let element of nodeList) {
         element.addEventListener("mouseover", function(){
             element.setAttribute("style", `background-color: rgb(${randomColor()})`);
+        });
+    }
+}
+
+// Repeat of previous apply function, applys black color.
+function applyBlack() {
+    let nodeList = document.querySelectorAll(".column");
+    for(let element of nodeList) {
+        element.addEventListener("mouseover", function(){
+            element.setAttribute("style", "background-color: black");
         });
     }
 }
