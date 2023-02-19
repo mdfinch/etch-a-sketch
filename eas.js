@@ -64,7 +64,6 @@ function cleanBoard() {
     for (let element of nodeList) {
         element.classList.remove("color");
         element.removeAttribute("style");
-        element.removeEventListener
     }
 }
 
