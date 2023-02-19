@@ -64,6 +64,7 @@ function cleanBoard() {
     for (let element of nodeList) {
         element.classList.remove("color");
         element.removeAttribute("style");
+        element.removeEventListener
     }
 }
 
@@ -109,6 +110,28 @@ function applyEraser() {
     for(let element of nodeList) {
         element.addEventListener("mouseover", function(){
             element.setAttribute("style", "background-color: white");
+        });
+    }
+}
+
+// Adds event listener to color picker, when the color is picked the
+// value is passed to the applyColor function.
+function pickColor() {
+    let colorInput = document.querySelector("#color");
+    colorInput.addEventListener("input", () => {
+        let color = colorInput.value;
+        applyColor(color);
+    });
+}
+
+
+// Repeat of apply function, applys selected color.
+function applyColor(color) {
+    console.log(`Color: ${color}`);
+    let nodeList = document.querySelectorAll(".column");
+    for(let element of nodeList) {
+        element.addEventListener("mouseover", function(){
+            element.setAttribute("style", `background-color: ${color}`);
         });
     }
 }
