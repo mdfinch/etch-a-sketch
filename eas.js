@@ -25,7 +25,6 @@ for (let index = 0; index < slider.value; index++) {
         // All columns are individually named to allow for seperate event listeners
         // A generic column class is used for styling
         column.className = `column-${index} column`;
-        column.addEventListener("mouseover", function(){column.classList.add("color")})
         row.appendChild(column);
     }
 }
