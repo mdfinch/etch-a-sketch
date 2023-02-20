@@ -10,8 +10,9 @@
 <body>
     <header>Etch-A-Sketch</header>
     <div class="container">
-        <div>
-            <input type="button" onclick="cleanBoard()" value="Clear">
+        <div class="options">
+            <div>
+                <input type="button" onclick="cleanBoard()" value="Clear">
         </div>
         <div>
             <input type="button" onclick="applyRainbow()" value="Rainbow">
@@ -28,7 +29,9 @@
         <input type="range" name="slider" id="slider" min="4" max="16" step="2" autocomplete="off">
         <br>
         <label for="slider">Grid Size</label>
+        
         <p>Value: <span id="value"></span> X <span id="value2"></span></p>
+    </div>
         <div class="grid"></div>
     </div>
 </body>

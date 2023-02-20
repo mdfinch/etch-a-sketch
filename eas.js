@@ -51,7 +51,6 @@ function gridSize(sliderValue) {
         for (let index = 0; index < sliderValue; index++) {
             let column = document.createElement("div");
             column.className = `column-${index} column`;
-            column.addEventListener("mouseover", function(){column.classList.add("color")})
             row.appendChild(column);
         }
     }
@@ -61,7 +60,6 @@ function gridSize(sliderValue) {
 function cleanBoard() {
     let nodeList = document.querySelectorAll(".column");
     for (let element of nodeList) {
-        element.classList.remove("color");
         element.removeAttribute("style");
     }
 }
